@@ -21,6 +21,7 @@
  * Test your function by passing various string literals to it and
  * console.logging the function's return value
  */
+
 console.log("Problem 1 below");
 
 function analyzeColor(color) {
@@ -32,7 +33,7 @@ function analyzeColor(color) {
     } else if(formattedColor === "green") {
         return "Green is the color of grass!";
     } else {
-        return "Sorry, I don't know anything about that color...";
+        return `Sorry, I don't know anything about ${formattedColor}...`;
     }
 }
 console.log(analyzeColor("Blue"));
@@ -55,6 +56,7 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
  * You should see a different message every time you refresh the page
  */
+
 console.log("Problem 2 below");
 
 console.log(analyzeColor(randomColor));
@@ -92,18 +94,19 @@ analyzeColorRefactor("mARoon");
 // WE CAN ALSO DO THIS (see below).. sorry, I'm learning and trying out new things
 
 console.log("Problem 3 secondary function below");
+
 function analyzeColorRefactor2(color) {
     let formattedColorRefactor2 = color.toLowerCase();
     let value;
     switch(formattedColorRefactor2) {
         case "red":
-            value = "Apples are red, take 2"
+            value = `Apples are ${formattedColorRefactor2}, take 2`
             break;
         case "blue":
-            value = "Blue whale, take 2"
+            value = `${formattedColorRefactor2} whale, take 2`
             break;
         case "green":
-            value = "Apples are also green, take 2"
+            value = `Apples are also ${formattedColorRefactor2}, take 2`
             break;
         default:
             value = `Sorry, ${formattedColorRefactor2} isn't in my vocabulary, take 2`
@@ -126,8 +129,8 @@ console.log(analyzeColorRefactor2("MAROON"));
 console.log("Problem 4 is the alert");
 
 let userColorInput = prompt("Please input any color of your choice");
-(analyzeColor(userColorInput));   // used the original function from the first problem in this set.
-alert(analyzeColor(userColorInput));
+alert(analyzeColor(userColorInput));   // used the original function from the first problem in this set
+alert(analyzeColorRefactor2(userColorInput)); // refactored function
 
 
 /* ########################################################################## */
