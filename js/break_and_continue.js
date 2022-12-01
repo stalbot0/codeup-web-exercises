@@ -1,19 +1,32 @@
 "use strict";
 
-let userOdd = prompt("Please input an odd integer between 1 and 50.");
-let userOddToInt = parseInt(userOdd);
-console.log(`Number to skip is ${userOddToInt}`);
-for (let i = 1; i < 50; i += 2) {
-    if (userOddToInt % 2 === 0) {
-        prompt(`${userOddToInt} is not an odd number, please try again.`);
-        break;
-    }
-    if (i === userOddToInt) {
-        console.log(`Yikes! Skipping number ${userOddToInt}`);
+// BREAK AND CONTINUE NUMBER 1
+
+let numberToSkip = parseInt(prompt("Please enter an odd number between 1 and 50."))
+
+while (isNaN === numberToSkip || numberToSkip < 1 || numberToSkip > 50 || numberToSkip % 2 === 0) {
+    numberToSkip = parseInt(prompt("Try again, Please enter an odd number between 1 and 50."));
+} console.log(`Number to skip is: ${numberToSkip}`);
+
+for (let i = 1; i < 50; i++) {
+    if (i === numberToSkip) {
+        console.log(`Yikes, skipping number ${numberToSkip}!`);
         continue;
     }
-    console.log(`Here is an odd number: ${i}`);
+    if (i % 2 === 0) {
+        continue;
+    }
+    if (i >= 50) {
+        break;
+    } console.log(`Here is an odd number: ${i}`);
 }
+
+console.log(`\n`);
+
+
+
+
+
 
 
 

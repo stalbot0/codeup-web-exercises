@@ -10,7 +10,7 @@
 function isTrue(anyInput) {
     return anyInput === true;
 }
-console.log(isTrue(true), "isTrue"); // this is the only value that returns true.
+console.log(isTrue(true), "<-- function isTrue"); // this is the only value that returns true.
 
 
 /** Define a function named isFalse that takes in a value and returns a true if and only if the provided input is equal to false in both type and value.
@@ -25,7 +25,7 @@ console.log(isTrue(true), "isTrue"); // this is the only value that returns true
 function isFalse(aValue) {
     return aValue === false;
 }
-console.log(isFalse(false), "isFalse"); // this is the only value that returns true.
+console.log(isFalse(false), "<-- function isFalse"); // this is the only value that returns true.
 
 
 /** Define a function named not that takes in any input and returns the boolean opposite of the provided input.
@@ -43,7 +43,7 @@ console.log(isFalse(false), "isFalse"); // this is the only value that returns t
 function not(trueInput) {
     return !trueInput;
 }
-console.log(not(false), "not"); // this logs/returns boolean opposites
+console.log(not(false), "<-- function not"); // this logs/returns boolean opposites
 
 
 /** Define a function named addOne that takes in a single input. If the input is a number or a numeric string, return the value plus one.
@@ -61,7 +61,7 @@ console.log(not(false), "not"); // this logs/returns boolean opposites
 function addOne(singleInput) {
     return parseFloat(singleInput) + 1;
 }
-console.log(addOne(5.789), "addOne"); // returns value plus one
+console.log(addOne(5.789), "<-- function addOne"); // returns value plus one
 
 
 /** Define a function named isEven that takes in a single input. If the input is an even number or a string containing an even number, return true. Any other input should return false for the output.
@@ -75,9 +75,11 @@ console.log(addOne(5.789), "addOne"); // returns value plus one
  isEven("banana")            // false
  */
 function isEven(singleInput) {
-    return singleInput % 2 === 0;
+    if (singleInput === false) {
+        return false;
+    } return singleInput % 2 === 0;
 }
-console.log(isEven("banana"), "isEven"); // returns appropriate request
+console.log(isEven(2), "<-- function isEven"); // returns appropriate request
 
 
 /** Define a function named isIdentical that takes in two input arguments. If each input is equal both in data type and in value, then return true. If the values are not the same data type or not the same value, return false.
@@ -93,7 +95,7 @@ console.log(isEven("banana"), "isEven"); // returns appropriate request
 function isIdentical(inputOne, inputTwo) {
     return inputOne === inputTwo;
 }
-console.log(isIdentical(3, 3.0), "isIdentical");
+console.log(isIdentical(3, 3.0), "<-- function isIdentical");
 
 
 /** Define a function named isEqual that takes in two input arguments. If each argument is equal only in value, then return true. Otherwise return false.
@@ -108,7 +110,7 @@ console.log(isIdentical(3, 3.0), "isIdentical");
 function isEqual(inputOne, inputTwo) {
     return inputOne == inputTwo;
 }
-console.log(isEqual(4, -5), "isEqual");
+console.log(isEqual(4, -5), "<-- function isEqual");
 
 
 /** Define a function named or that takes in two input arguments. The output returned should be the result of an or operation on both inputs.
@@ -122,7 +124,7 @@ console.log(isEqual(4, -5), "isEqual");
 function orThat(inputOne, inputTwo) {
     return inputOne || inputTwo;
 }
-console.log(orThat(true, false), "orThat"); // yes indeed.
+console.log(orThat(true, false), "<-- function orThat"); // yes indeed.
 
 /** Define a function named and that takes in two input arguments and returns the result of a logical and operation of both inputs.
 
@@ -135,7 +137,7 @@ console.log(orThat(true, false), "orThat"); // yes indeed.
 function andThat(inputOne, inputTwo) {
     return inputOne && inputTwo;
 }
-console.log(andThat(false, true), "andThat"); // yes indeed
+console.log(andThat(false, true), "<-- function andThat"); // yes indeed
 
 
 /** Define a function named concat that takes in two input arguments. If both arguments are strings, then return the concatenated result. If two numbers are provided, then return the string concatenation of each set of numerals.
@@ -149,4 +151,4 @@ console.log(andThat(false, true), "andThat"); // yes indeed
 function concat(inputOne, inputTwo) {
     return inputOne.toString() + inputTwo.toString();
 }
-console.log(concat(4, 2));
+console.log(concat(4, 2), "<-- function concat");
