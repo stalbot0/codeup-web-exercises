@@ -6,7 +6,7 @@
      * Create an array of 4 people's names and store it in a variable called
      * 'names'.
      */
-    let names = ["Stephen", "Michael", "John", "Ricardo"]
+    let names = ["Stephen", "Michael", "John", "Ricardo"];
 
     /**
      * TODO:
@@ -65,18 +65,18 @@
     let numArray = [1, 2, 3, 4, 5];
 
     function returnsFirst(arr) {
-        console.log(arr[0]);
+        return arr[0];
     }
-    returnsFirst(numArray);
+    console.log(returnsFirst(numArray));
 
     function returnsSecond(arr) {
-        console.log(arr[1]);
+        return arr[1];
     }
-    returnsSecond(numArray);
+    console.log(returnsSecond(numArray));
 
     function returnsLast(arr) {
-        console.log(arr.length - 1);
+        return (arr.length - 1);
     }
-    returnsLast(numArray);
+    console.log(returnsLast(numArray));
 
 })();
