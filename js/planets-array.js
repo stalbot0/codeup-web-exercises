@@ -29,18 +29,18 @@
     console.log('----------');
 
     console.log('Removing "The Sun" from the beginning of the planets array.');
-    planets.shift('The Sun');
+    planets.shift();
     console.log(planets);
     console.log('----------');
 
     console.log('Removing "Pluto" from the end of the planets array.');
-    planets.pop('Pluto');
+    planets.pop();
     console.log(planets);
     console.log('----------');
 
     console.log('Finding and logging the index of "Earth" in the planets array.');
     let earthIndex = planets.indexOf('Earth');
-    console.log(earthIndex);
+    console.log(`Earth is at index: [${earthIndex}]`);
     console.log('----------');
 
     console.log("Reversing the order of the planets array.");
