@@ -75,7 +75,7 @@
     console.log(returnsSecond(numArray));
 
     function returnsLast(arr) {
-        return (arr.length - 1);
+        return arr[arr.length - 1];
     }
     console.log(returnsLast(numArray));
 
