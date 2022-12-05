@@ -1,6 +1,9 @@
 (function(){
     "use strict";
 
+    ////// WHEN OPENING THE PLANETS-JS.HTML FILE IN THE BROWSER FOR SOME REASON YOU MUST
+    ////// REFRESH THE PAGE TO SHOW THE RESULTS OF EACH STEP
+
     var planets = [
         'Mercury',
         'Venus',
