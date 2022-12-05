@@ -17,6 +17,8 @@
     console.log(person.firstName);
     console.log(person.lastName);
 
+    console.log('\n');
+
     /**
      * TODO:
      * Add a sayHello method to the person object that returns a greeting using
@@ -26,7 +28,12 @@
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
+    person.sayHello = function () {
+        return `Hello from ${person.firstName} ${person.lastName}`;
+    }
+    console.log(person.sayHello());
 
+    console.log('\n');
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
      * more than $200. If a shopper spends more than $200, they get a 12%
@@ -40,12 +47,32 @@
      * represents one shopper. Use a foreach loop to iterate through the array,
      * and console.log the relevant messages for each person
      */
+    var shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+    function moneySpent(name, amount) {
+        if((parseInt(amount)) > 200) {
+            console.log(`${name}, you spent $${amount}! You get a 12% discount, making your new total $${amount - (amount * .12)}`);
+        } else if((parseInt(amount) <= 200)) {
+            console.log(`${name}, your total is $${amount} since you do not qualify for the discount`);
+        }
+    }
+    shoppers.forEach(moneySpent);
+    // moneySpent("Cameron", 180);
+    // moneySpent("Ryan", 250);
+    // moneySpent("George", 320);
+
+    shoppers.forEach(function(name, amount) {
+        if((parseInt(amount)) > 200) {
+            console.log(`${name}, you spent $${amount}! You get a 12% discount, making your new total $${amount - (amount * .12)}`);
+        } else if((parseInt(amount) <= 200)) {
+            console.log(`${name}, your total is $${amount} since you do not qualify for the discount`);
+        }
+    });
+
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -59,6 +86,7 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+
 
     /**
      * TODO:
@@ -84,6 +112,7 @@
      *      ---
      *      ...
      */
+
 
     /**
      * Bonus:
