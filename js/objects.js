@@ -29,7 +29,7 @@
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
     person.sayHello = function () {
-        return (`Hello from ${person.firstName} ${person.lastName}`);
+        return (`Hello from ${this.firstName} ${this.lastName}`);
     }
     console.log(person.sayHello());
 
