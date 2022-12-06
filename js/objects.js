@@ -73,6 +73,8 @@
         }
     });
 
+    console.log('\n');
+
 
 
 
@@ -89,13 +91,40 @@
      * > console.log(books[0].author.lastName) // "Adams"
      */
     let books = [
-        {title: "The Slippery Slope", author: "Jimminy Cricket"},
-        {title: "Who told my Grandma that I am an Alien Robot", author: "Zeeb Zorb"},
-        {title: "This is a book", author: "Sleepy Baby"},
-        {title: "This is NOT a book", author: "Awake Baby"},
-        {title: "Is this a book?", author: "Confused Baby"}
+        {title: "The Slippery Slope",
+            author: {
+                firstName: "Jimminy",
+                lastName: "Cricket"
+            }
+        },
+        {title: "Who told my Grandma that I am an Alien Robot",
+            author: {
+                firstName: "Zeeb",
+                lastName: "Zorb"
+            }
+        },
+        {title: "This is a book",
+            author: {
+                firstName: "Sleepy",
+                lastName: "Baby Boy"
+            }
+        },
+        {title: "This is NOT a book",
+            author: {
+                firstName: "Awake",
+                lastName: "Baby Girl"
+            }
+        },
+        {title: "Is this a book?",
+            author: {
+                firstName: "Confused",
+                lastName: "Baby Gremlin"
+            }
+        }
     ];
+    console.log(books[4].author.lastName)
 
+    console.log('\n');
 
 
 
@@ -124,6 +153,34 @@
      *      ...
      */
 
+books.forEach(function(book) {
+    if(book.title === "The Slippery Slope") {
+        console.log(`Book # 1`);
+        console.log(`Title: ${book.title}`);
+        console.log(`Author: ${book.author.firstName} ${book.author.lastName}`)
+        console.log(`-----`);
+    } if(book.title === "Who told my Grandma that I am an Alien Robot") {
+        console.log(`Book # 2`);
+        console.log(`Title: ${book.title}`);
+        console.log(`Author: ${book.author.firstName} ${book.author.lastName}`)
+        console.log(`-----`);
+    } if(book.title === "This is a book") {
+        console.log(`Book # 3`);
+        console.log(`Title: ${book.title}`);
+        console.log(`Author: ${book.author.firstName} ${book.author.lastName}`)
+        console.log(`-----`);
+    } if(book.title === "This is NOT a book") {
+        console.log(`Book # 4`);
+        console.log(`Title: ${book.title}`);
+        console.log(`Author: ${book.author.firstName} ${book.author.lastName}`)
+        console.log(`-----`);
+    } if(book.title === "Is this a book?") {
+        console.log(`Book # 5`);
+        console.log(`Title: ${book.title}`);
+        console.log(`Author: ${book.author.firstName} ${book.author.lastName}`)
+        console.log(`-----`);
+    }
+});
 
     /**
      * Bonus:
