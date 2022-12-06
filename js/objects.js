@@ -40,8 +40,11 @@
      * discount. Write a JS program, using conditionals, that logs to the
      * browser, how much Ryan, Cameron and George need to pay. We know that
      * Cameron bought $180, Ryan $250 and George $320. Your program will have to
-     * display a line with the name of the person, the amount before the
-     * discount, the discount, if any, and the amount after the discount.
+     * display a line with
+     * the name of the person
+     * the amount before the discount
+     * the discount, if any
+     * and the amount after the discount.
      *
      * Uncomment the lines below to create an array of objects where each object
      * represents one shopper. Use a foreach loop to iterate through the array,
@@ -54,9 +57,9 @@
     ];
     shoppers.forEach(function(shopper) {
         if(((shopper.amount)) > 200) {
-            console.log(`${shopper.name}, you spent $${shopper.amount}! You get a 12% discount, making your new total $${shopper.amount - (shopper.amount * .12)}`);
+            console.log(`${shopper.name}, your total is $${shopper.amount}. Since you spent over $200, you get a 12% discount! Making your new total $${shopper.amount - (shopper.amount * .12)}`);
         } else if(((shopper.amount) <= 200)) {
-            console.log(`${shopper.name}, your total is $${shopper.amount} since you do not qualify for the discount`);
+            console.log(`${shopper.name}, your total is $${shopper.amount} and since you did not spend over $200, you do not qualify for the discount. Your total is still $${shopper.amount}`);
         }
     });
 
@@ -77,6 +80,15 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+    // could do this to push information to the array
+        // let books = [];
+        // books.push({
+        //      title: "insert title",
+        //      author: {
+        //          firstName: "insert first name",
+        //          lastName: "insert last name"
+        //      }
+        //  });
     let books = [
         {title: "The Slippery Slope",
             author: {
@@ -140,29 +152,30 @@
      *      ...
      */
 
+
 books.forEach(function(book) {
     if(book.title === "The Slippery Slope") {
-        console.log(`Book # 1`);
+        console.log(`Book # ${books.indexOf(book) + 1}`);
         console.log(`Title: ${book.title}`);
         console.log(`Author: ${book.author.firstName} ${book.author.lastName}`)
         console.log(`-----`);
     } if(book.title === "Who told my Grandma that I am an Alien Robot") {
-        console.log(`Book # 2`);
+        console.log(`Book # ${books.indexOf(book) + 1}`);
         console.log(`Title: ${book.title}`);
         console.log(`Author: ${book.author.firstName} ${book.author.lastName}`)
         console.log(`-----`);
     } if(book.title === "This is a book") {
-        console.log(`Book # 3`);
+        console.log(`Book # ${books.indexOf(book) + 1}`);
         console.log(`Title: ${book.title}`);
         console.log(`Author: ${book.author.firstName} ${book.author.lastName}`)
         console.log(`-----`);
     } if(book.title === "This is NOT a book") {
-        console.log(`Book # 4`);
+        console.log(`Book # ${books.indexOf(book) + 1}`);
         console.log(`Title: ${book.title}`);
         console.log(`Author: ${book.author.firstName} ${book.author.lastName}`)
         console.log(`-----`);
     } if(book.title === "Is this a book?") {
-        console.log(`Book # 5`);
+        console.log(`Book # ${books.indexOf(book) + 1}`);
         console.log(`Title: ${book.title}`);
         console.log(`Author: ${book.author.firstName} ${book.author.lastName}`)
     }
