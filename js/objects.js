@@ -90,13 +90,17 @@
         //      }
         //  });
     let books = [
-        {title: "The Slippery Slope",
+        {
+            id: 1,
+            title: "The Slippery Slope",
             author: {
                 firstName: "Jimminy",
                 lastName: "Cricket"
             }
         },
-        {title: "Who told my Grandma that I am an Alien Robot",
+        {
+            id: 2,
+            title: "Who told my Grandma that I am an Alien Robot",
             author: {
                 firstName: "Zeeb",
                 lastName: "Zorb"
@@ -192,8 +196,49 @@ books.forEach(function(book) {
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
-    function createBook(title, author) {
-
+    function createBook(title, fName, lName) {
+        let book = {
+            title: title,
+            author: {
+                firstName: fName,
+                lastName: lName
+            }
+        };
+        // add a showBookInfo function to each book
+        book.showBookInfo = function(index) {
+            console.log(`
+            Book #${index}
+            Title: ${this.title}
+            Author: ${this.author.firstName} ${this.author.lastName}
+            `)
+        }
+        return book;
     }
+    books = []; // called the array again to push information to it
+    books.push(createBook("PeePee", "PooPoo", "Snot"));
+    books.push(createBook("Dune", "Frank", "Herbert")); // pushes the book strings from the function being called into the previous books array.
+    console.log(books);
+
+
+    let index = 1; //this is the method to reset the index to 1 and uses a for of loop to call the other function in the create book function to show the info as the indeces keep going up
+    for (const book of books) {
+        book.showBookInfo(index);
+        index++
+    }
+
+    //////ANOTHER WAY TO WRITE THE SAME THING BUT AS A REGUALR FUNCTION//////
+    function showBookInfo2(book) {
+        console.log(`
+            Book #${index}
+            Title: ${book.title}
+            Author: ${book.author.firstName} ${book.author.lastName}
+            `)
+    }
+    let index2 = 1;
+    for (const book of books) {
+        showBookInfo2(book);
+        index2++
+    }
+
 
 })();
