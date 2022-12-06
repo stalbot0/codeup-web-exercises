@@ -88,6 +88,15 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+    let books = [
+        {title: "The Slippery Slope", author: "Jimminy Cricket"},
+        {title: "Who told my Grandma that I am an Alien Robot", author: "Zeeb Zorb"},
+        {title: "This is a book", author: "Sleepy Baby"},
+        {title: "This is NOT a book", author: "Awake Baby"},
+        {title: "Is this a book?", author: "Confused Baby"}
+    ];
+
+
 
 
     /**
