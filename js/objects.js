@@ -52,19 +52,6 @@
         {name: 'Ryan', amount: 250},
         {name: 'George', amount: 320}
     ];
-
-    // function moneySpent(name, amount) {
-    //     if((parseInt(amount)) > 200) {
-    //         console.log(`${name}, you spent $${amount}! You get a 12% discount, making your new total $${amount - (amount * .12)}`);
-    //     } else if((parseInt(amount) <= 200)) {
-    //         console.log(`${name}, your total is $${amount} since you do not qualify for the discount`);
-    //     }
-    // }
-    // shoppers.forEach(moneySpent);
-    // moneySpent("Cameron", 180);
-    // moneySpent("Ryan", 250);
-    // moneySpent("George", 320);
-
     shoppers.forEach(function(shopper) {
         if(((shopper.amount)) > 200) {
             console.log(`${shopper.name}, you spent $${shopper.amount}! You get a 12% discount, making your new total $${shopper.amount - (shopper.amount * .12)}`);
