@@ -106,19 +106,19 @@
         {title: "This is a book",
             author: {
                 firstName: "Sleepy",
-                lastName: "Baby Boy"
+                lastName: "Boi"
             }
         },
         {title: "This is NOT a book",
             author: {
-                firstName: "Awake",
-                lastName: "Baby Girl"
+                firstName: "Smol",
+                lastName: "Baby"
             }
         },
         {title: "Is this a book?",
             author: {
                 firstName: "Confused",
-                lastName: "Baby Gremlin"
+                lastName: "Gremlin"
             }
         }
     ];
@@ -178,9 +178,9 @@ books.forEach(function(book) {
         console.log(`Book # 5`);
         console.log(`Title: ${book.title}`);
         console.log(`Author: ${book.author.firstName} ${book.author.lastName}`)
-        console.log(`-----`);
     }
 });
+    console.log('\n');
 
     /**
      * Bonus:
@@ -192,5 +192,8 @@ books.forEach(function(book) {
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+    function createBook(title, author) {
+
+    }
 
 })();
