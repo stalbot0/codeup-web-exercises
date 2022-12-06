@@ -14,12 +14,11 @@
         logInfo: function (doRounding) {
             // TODO: complete this method.
             // If doRounding is true, round the result to the nearest integer.
-                if(doRounding === true) {
-                    console.log(Math.round(this.getArea()));
-                } else {
-            // Otherwise, output the complete value
-                console.log(`Area of a circle with radius: ${this.radius} is ${this.getArea()}`);
-                }
+            let area = this.getArea();
+            if(doRounding === true) {
+               area = Math.round(area);
+            }
+                console.log(`Area of a circle with radius: ${this.radius} is ${area}`);
         }
     };
 
