@@ -72,19 +72,19 @@ users.forEach(function(user) {
     // TODO: rewrite the code below to use object destructuring assignment
     //       note that you can also use destructuring assignment in the function
     //       parameter definition
-    // const name = user.name;
-    // const email = user.email;
-    // const languages = user.languages;
+    const name = user.name;
+    const email = user.email;
+    const languages = user.languages;
 
-    user.push({
-        name: user.name,
-        email: user.email,
-        languages: user.languages
-    });
+    const person = {
+        name,
+        email,
+        languages
+    }
 
     // TODO: rewrite the assignment below to use template strings
     // developers.push(name + '\'s email is ' + email + name + ' knows ' + languages.join(', '));
-    developers.push(`${this.name}'s email is ${this.email} ${this.name} knows ${this.languages.join(', ')}`);
+    developers.push(`${this.user}'s email is ${this.email} ${this.name} knows ${this.languages.join(', ')}`);
 });
 
 
