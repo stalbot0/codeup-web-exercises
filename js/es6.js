@@ -36,31 +36,38 @@ const users = [
 // to the languages array
 // TODO: replace the `var` keyword with `const`, then try to reassign a variable
 // declared as `const`
-var name = 'stephen';
-var email = 'stephen.clark.talbot@gmail.com';
-var languages = ['html', 'css', 'javascript'];
+const name = 'stephen';
+const email = 'stephen.clark.talbot@gmail.com';
+const languages = ['html', 'css', 'javascript'];
+
+// languages = "blah blah blah"; <-- can't reassign
 
 // TODO: rewrite the object literal using object property shorthand
 users.push({
-    name: name,
-    email: email,
-    languages: languages
+    name: "stephen",
+    email: "stephen.clark.talbot@gmail.com",
+    languages: ['html', 'css', 'javascript']
 });
 
 // TODO: replace `var` with `let` in the following variable declarations
-var emails = [];
-var names = [];
+let emails = [];
+let names = [];
 
 // TODO: rewrite the following using arrow functions
-users.forEach(function(user) {
-    return emails.push(user.email);
-});
-users.forEach(function(user) {
-    return names.push(user.name);
-});
+// users.forEach(function(user) {
+//     return emails.push(user.email);
+// });
+
+users.forEach((user) => (emails.push(user.email)));
+
+// users.forEach(function(user) {
+//     return names.push(user.name);
+// });
+
+users.forEach((user) => (names.push(user.name)));
 
 // TODO: replace `var` with `let` in the following declaration
-var developers = [];
+let developers = [];
 users.forEach(function(user) {
     // TODO: rewrite the code below to use object destructuring assignment
     //       note that you can also use destructuring assignment in the function
@@ -69,9 +76,17 @@ users.forEach(function(user) {
     const email = user.email;
     const languages = user.languages;
 
+    user.push({
+        name: user.name,
+        email: user.email,
+        languages: user.languages
+    });
+
     // TODO: rewrite the assignment below to use template strings
     developers.push(name + '\'s email is ' + email + name + ' knows ' + languages.join(', '));
+    developers.push(`${this.name}'s email is ${this.email} ${this.name} knows ${this.languages.join(', ')}`);
 });
+
 
 // TODO: Use `let` for the following variable
 var list = '<ul>';
