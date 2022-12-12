@@ -5,6 +5,51 @@ comment
 */
 
 .fancy-header {
-    color: #2E8B57; /* single line comment */
+    color: #2C3E50; /* single line comment */
     text-decoration: underline;
+    text-decoration-color: #696969;
+}
+
+header {
+    text-align: center;
+}
+
+#core_values_our_process_2020_vision {
+    background-image: url("https://media.istockphoto.com/id/871030872/photo/programming-code-abstract-technology-background-of-software-developer.jpg?b=1&s=170667a&w=0&k=20&c=-4_fKSaeTwGLirw2EmAx-M8Ng9TpVyj2luQl5bK6eDI=");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: center;
+    background-position-x: right;
+}
+
+h3 {
+    color: #5D6D7E;
+    text-decoration: underline;
+    text-decoration-color: #696969;
+}
+
+#company_vision {
+    text-align: center;
+}
+
+body {
+    background-image: url("https://static.vecteezy.com/system/resources/previews/001/984/361/original/abstract-modern-pattern-background-white-and-grey-geometric-texture-art-illustration-free-vector.jpg"); /*COW*/
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: top;
+    background-color: #F1F1F1;
+}
+
+ul {
+   list-style-type: circle;
+}
+
+html {
+    font-family: "tahoma", serif, serif;
+}
+
+.plan-price-features {
+    border: 2px solid;
+    padding: 5px;
+    text-align: center;
 }
