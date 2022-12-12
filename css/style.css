@@ -20,6 +20,7 @@ header {
     background-size: contain;
     background-position-y: center;
     background-position-x: right;
+    padding: 0;
 }
 
 h3 {
@@ -49,7 +50,7 @@ html {
 }
 
 .plan-price-features {
-    border: 2px solid;
+    border: 1px solid;
     padding: 5px;
     text-align: center;
 }
