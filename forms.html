@@ -10,24 +10,53 @@
     <title>Register With Us</title>
 </head>
 <body>
+<header>
+    <h2>Register with us!</h2>
+</header>
 <main>
-    <form method="GET" action="https://request-inspector.glitch.me/">
-        <label for="email">Email</label>
-        <input id="email" name="email" type="text" placeholder="Enter your email">
+    <form method="POST" action="https://request-inspector.glitch.me/">
+        <section>
+            <label for="email">Email:</label>
+            <input id="email" name="email" type="text" placeholder="Enter your email">
+            <br>
+            <label for="password">Password:</label>
+            <input id="password" name="password" type="password" placeholder="Enter your password">
+        </section>
         <br>
-        <label for="password">Password</label>
-        <input id="password" name="password" type="password" placeholder="Enter your password">
         <br>
-        <input type="submit">
+        <section>
+            <label for="Bio"></label>
+            <textarea id="Bio" name="Bio" placeholder="Input a short description of yourself" cols="30" rows="10"></textarea>
+        </section>
+        <br>
+        <section>
+            <p><strong>How did you hear about us?</strong></p>
+            <input type="radio" id="billboard" name="referral_question1" value="Billboard">
+            <label for="billboard">Billboard</label><br>
+            <input type="radio" id="radio_advertisement" name="referral_question2" value="Radio Advertisement">
+            <label for="radio_advertisement">Radio Advertisement</label><br>
+            <input type="radio" id="internet_advertisement" name="referral_question3" value="Internet Advertisement">
+            <label for="internet_advertisement">Internet Advertisement</label><br>
+            <input type="radio" id="other" name="referral_question4" value="Other">
+            <label for="other">Other</label>
+        </section>
+        <br>
+        <section>
+            <label for="web_browser">Which web browser are you using?</label><br>
+            <select name="web_browser" id="web_browser">
+                <option disabled value="none" selected>Please select</option>
+                <option value="chrome">Google Chrome</option>
+                <option value="internet_explorer">Internet Explorer</option>
+                <option value="firefox">Firefox</option>
+                <option value="safari">Safari</option>
+                <option value="other">Other</option>
+            </select>
+        </section>
         <br>
         <br>
-        <label for="Bio">Input a short description of yourself below.</label>
-        <br>
-        <textarea id="Bio" name="Bio"></textarea>
-        <br>
-        <button type="submit">Submit Your Bio</button>
+        <label for="submit">Submit this form when the page is complete.</label><br>
+        <input type="submit" id="submit">
     </form>
 </main>
-
 </body>
 </html>
