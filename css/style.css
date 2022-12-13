@@ -27,10 +27,7 @@ h3 {
     color: #5D6D7E;
     text-decoration: underline;
     text-decoration-color: #696969;
-}
-
-#company_vision {
-    text-align: center;
+    margin-left: 75px;
 }
 
 body {
@@ -41,16 +38,44 @@ body {
     background-color: #F1F1F1;
 }
 
-ul {
+.unordered-list1 {
    list-style-type: circle;
+    margin-left: 50px;
+}
+.unordered-list2 {
+    list-style-type: circle;
+    margin-left: 15px;
+}
+
+.ordered-list {
+    margin-left: 65px;
 }
 
 html {
     font-family: "tahoma", serif, serif;
 }
 
+.company-vision {
+    text-align: center;
+}
+
 .plan-price-features {
-    border: 1px solid;
-    padding: 5px;
+    margin-right: auto;
+    margin-left: auto;
+    border: 5px;
+}
+
+.center-table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer {
+    text-align: center;
+    text-decoration: dimgrey;
+    text-decoration-style: dashed;
+}
+
+.top_of_page_link {
     text-align: center;
 }
