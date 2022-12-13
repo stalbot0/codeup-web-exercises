@@ -47,7 +47,6 @@ fieldset {
 .form-label {
     /* The text of a label must be bold */
     font-weight: bold;
-    margin-left: 7px;
 }
 
 .btn-block {
@@ -63,18 +62,18 @@ fieldset {
     /* The border of this element should be 1px, and its color should be light grey */
     border: 1px solid #696969;
     background-color: #0fb784;
-    margin-left: 15px;
-    width: 97.5%;
+    margin-left: 8px;
+    width: calc(100% - .75em);
 }
 
 .form-control {
     /* There must be 4px on top of the text and below the text of an input with this class */
-    padding: 4px 0 4px 0;
+    padding: 4px 0;
     /* It should have a separation of .5em from elements on top of it and below it */
-    margin: .5em;
+    margin: .5em 0;
     /* You'll need to use the `calc` function to make the width of this element match the width of the button */
     /* See the example at: https://developer.mozilla.org/en-US/docs/Web/CSS/calc */
-    width: calc(100% - 1.4em);
+    width: calc(100% - 1em);
     /* HINT: Examples are available at: https://glitch.com/~input-button-width */
 }
 
