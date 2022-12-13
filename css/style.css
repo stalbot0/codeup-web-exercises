@@ -68,14 +68,20 @@ h3.company-vision {
     margin-right: auto;
     margin-left: auto;
     border: 2px solid black;
-    font-family: "Arial Black", Serif, cursive;
+    background-color: rgba(188, 143, 143, 0.27);
 }
 
-.plan-price-features>th, .plan-price-features>td {
-    border: 1px solid black;
+.plan-price-features th {
+    border: 2px solid black;
+    font-family: "Bodoni 72 Oldstyle", serif;
 }
 
-.center-table {
+.plan-price-features td {
+    border: 1px solid grey;
+    font-family: Chalkboard, fantasy;
+  }
+
+  .center-table {
     margin-left: auto;
     margin-right: auto;
 }
