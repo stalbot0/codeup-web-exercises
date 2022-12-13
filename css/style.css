@@ -34,8 +34,7 @@ h3 {
 body {
     background-image: url("https://static.vecteezy.com/system/resources/previews/001/984/361/original/abstract-modern-pattern-background-white-and-grey-geometric-texture-art-illustration-free-vector.jpg"); /*COW*/
     background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: top;
+    background-size: cover;
     background-color: #F1F1F1;
 }
 
@@ -56,14 +55,24 @@ html {
     font-family: "tahoma", serif, serif;
 }
 
-.company-vision {
+h3.company-vision {
     text-align: center;
 }
 
+.solid-border {
+    border: 1px solid black;
+}
+
 .plan-price-features {
+    padding: 2px;
     margin-right: auto;
     margin-left: auto;
-    border: 5px;
+    border: 2px solid black;
+    font-family: "Arial Black", Serif, cursive;
+}
+
+.plan-price-features>th, .plan-price-features>td {
+    border: 1px solid black;
 }
 
 .center-table {
@@ -77,19 +86,19 @@ html {
     text-decoration-style: dashed;
 }
 
-.top_of_page_link {
+.top_of_page_href {
     text-align: center;
 }
 
-.top_of_page_link>a:link {
+.top_of_page_href>a:link {
     color: #E61919
 }
-.top_of_page_link>a:visited {
+.top_of_page_href>a:hover {
+    color: #ff8e31
+}
+.top_of_page_href>a:visited {
     color: #875454
 }
-.top_of_page_link>a:hover {
-    color: #FFFC31
-}
-.top_of_page_link>a:active {
+.top_of_page_href>a:active {
     color: #2C3E50;
 }
