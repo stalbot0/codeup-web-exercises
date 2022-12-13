@@ -80,3 +80,16 @@ html {
 .top_of_page_link {
     text-align: center;
 }
+
+.top_of_page_link>a:link {
+    color: #E61919
+}
+.top_of_page_link>a:visited {
+    color: #875454
+}
+.top_of_page_link>a:hover {
+    color: #FFFC31
+}
+.top_of_page_link>a:active {
+    color: #2C3E50;
+}
