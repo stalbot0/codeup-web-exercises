@@ -53,7 +53,7 @@ a {
     height: 80px;
 }
 .profile-form {
-    line-height: 80px;
+    line-height: 5.25em;
     margin-right: 0.5em;
 }
 .profile-image {
@@ -109,7 +109,7 @@ a {
     border-bottom: 1px solid var(--separator-color);
     padding: 0.5em;
     overflow: scroll;
-    border-radius: 0.25em;
+    border-radius: 0.3em;
 }
 .media-image {
     max-width: 50px;
