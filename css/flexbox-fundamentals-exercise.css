@@ -37,30 +37,44 @@ h2, h3 {
 }
 
 section {
-    /* enter needed declarations here */
+    display: flex;
 }
 
 section:nth-of-type(1) {
     height: 3em;
     background: lightgreen;
     /* enter needed declarations here */
+    margin: 1em 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 section:nth-of-type(1) div:last-child {
     /* enter needed declarations here */
+    align-self: flex-start;
 }
 
 .purple-box {
     background: fuchsia;
     width: 3em;
     height: 1em;
+    margin: 1em 0
 }
 
 .purple-box:nth-of-type(1) {
-    /* enter needed declarations here */
+    /* enter needed declarations here */;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-grow: 2;
 }
 
 .purple-box:nth-of-type(2) {
     /* enter needed declarations here */
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
 }
 
 .blue-box {
@@ -71,11 +85,17 @@ section:nth-of-type(1) div:last-child {
 
 section:nth-of-type(3) {
     /* enter needed declarations here */
+    margin: .5em 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    flex-grow: 1;
 }
 
 section:nth-of-type(3) h3 {
     /* enter needed declarations here */
-
+    flex-grow: 1;
 }
 
 .orange-circle {
@@ -91,6 +111,9 @@ section:nth-of-type(3) h3 {
     width: 5em;
     background: brown;
     /* enter needed declarations here */
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: space-evenly;
 }
 
 .large-brown-box:nth-of-type(2) {
@@ -99,6 +122,10 @@ section:nth-of-type(3) h3 {
 
 section:nth-of-type(5) {
     /* enter needed declarations here */
+    margin: 1em 2em;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
 }
 
 .yellow-box {
@@ -111,6 +138,11 @@ section:nth-of-type(6) {
     background: coral;
     height: 14em;
     /* enter needed declarations here */
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-around;
+    align-items: center;
 }
 
 .grey-box {
