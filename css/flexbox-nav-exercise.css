@@ -10,15 +10,21 @@ nav {
     display: flex;
     justify-content: space-between;
     background-color: #bab9ba;
+    margin: 0;
 }
 
 .top-left-nav li {
     display: inline-block;
-    padding: 0 1em 0 0;
+    padding: 0 0.2em 0 0;
+    font-family: 'Work Sans', 'serif';
+    font-size: 12px;
 }
 
 .top-left-nav {
     padding-left: 0.5em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 ul {
@@ -34,10 +40,26 @@ a:hover {
     color: blue;
 }
 
-nav .top-left-nav li {
-    font-family: Montserrat, serif;
+/*nav .top-right-nav li:nth-child(1) {*/
+/*    font-family: 'Work Sans', 'serif';*/
+/*}*/
+
+.top-right-nav {
+    padding-right: 0.5em;
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .top-right-nav li {
     display: inline-block;
+    padding: 0;
+    font-family: 'Work Sans', 'serif';
+}
+
+.logo {
+    font-family: 'Montserrat', 'serif';
+    padding: .2em 0;
+    font-size: 3em;
 }
