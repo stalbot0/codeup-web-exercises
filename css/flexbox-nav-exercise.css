@@ -11,7 +11,8 @@ nav {
     justify-content: space-between;
     background-color: #bab9ba;
     margin: 0;
-    height: 70px;
+    /*height: 70px;*/
+    padding: .5em 0;
 }
 
 .top-left-nav li {
