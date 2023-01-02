@@ -226,7 +226,7 @@ books.forEach(function(book) {
         index++
     }
 
-    //////ANOTHER WAY TO WRITE THE SAME THING BUT AS A REGUALR FUNCTION//////
+    //////ANOTHER WAY TO WRITE THE SAME THING BUT AS A REGULAR FUNCTION//////
     function showBookInfo2(book) {
         console.log(`
             Book #${index}
