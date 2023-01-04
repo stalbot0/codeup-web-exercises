@@ -14,8 +14,12 @@
 </head>
 <body>
 <!-- Navbar at the top of the page created and edited below -->
-    <nav class="container-fluid navbar navbar-light">
+    <nav class="container-fluid navbar navbar-light navbar-expand-md">
       <span class="navbar-brand m-0 h1">Pizza World</span>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <span class="nav-item nav-link pe-0"><a class="sign-up" href="#">Order Online</a></span>
       <span class="nav-item nav-link"><a class="sign-up text-secondary" href="#">Menu</a></span>
 
@@ -28,18 +32,18 @@
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill ms-auto" viewBox="0 0 16 16">
             <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
           </svg>
-          <a class="text-end sign-up ms-2" href="#">Sign up!</a>
+          <a class="text-end sign-up m-2" href="#">Sign up!</a>
     </nav>
 
 <!-- Pizza image/jumbotron using flex to align the text within the background image -->
     <div class="container my-2">
-        <div class="jumbotron m-auto d-flex flex-column justify-content-center">
-            <h2 class="bg-white d-flex justify-content-center" style="--bs-bg-opacity: .6;">Welcome to Pizza World REEEEEEEE!</h2>
+        <div class="jumbotron m-auto d-flex flex-column justify-content-center" style="width: 100%">
+            <h2 class="bg-white d-flex justify-content-center" style="--bs-bg-opacity: .6;">Welcome to HxC Pizza World! SCREEEEEEE3EEE</h2>
         </div>
 
 <!-- Below is the beginning of the tabular section for the pizza options -->
         <div class="mt-5">
-            <h2>Build your own Pizza!</h2>
+            <h2>Build your own pizza!</h2>
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item">
                     <button class="nav-link active" id="size-and-crust-tab" data-bs-toggle="tab" data-bs-target="#size-and-crust" type="button"><span class="badge rounded-pill bg-secondary me-2">1</span>Size and Crust</button>
@@ -60,8 +64,54 @@
                     <div class="card border mb-3">
                         <div class="card-header text-white bg-primary">Choose Size and Crust</div>
                         <div class="card-body">
-                            <h5 class="card-title">Success card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <div class="card" style="width: 100%;">
+                                <div class="card-header">
+                                    Hand Tossed
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Garlic seasoned crust with a rich, buttery taste</li>
+                                    <li class="list-group-item">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" id="flexSmallTenInches">
+                                            <label class="form-check-label" for="flexSmallTenInches">
+                                                Small (10")
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" id="flexMediumTwelveInches">
+                                            <label class="form-check-label" for="flexMediumTwelveInches">
+                                                Medium (12")
+                                            </label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card mt-2" style="width: 100%;">
+                                <div class="card-header">
+                                    Crispy Thin
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio </li>
+                                    <li class="list-group-item">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" id="flexMediumTwelveInches2">
+                                            <label class="form-check-label" for="flexMediumTwelveInches2">
+                                                Medium (12")
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" id="flexLargeFourteenInches">
+                                            <label class="form-check-label" for="flexLargeFourteenInches">
+                                                Large (14")
+                                            </label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="card-footer bg-secondary text-end" style="--bs-bg-opacity: .1;">
                             <a href="#" class="btn btn-primary">Next Step ></a>
@@ -74,8 +124,28 @@
                     <div class="card border mb-3">
                         <div class="card-header text-white bg-primary">Choose Cheese and Sauce</div>
                         <div class="card-body">
-                            <h5 class="card-title">Success card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <div class="card" style="width: 100%;">
+                                <div class="card-header">
+                                    Cheese
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">How Much?</li>
+                                    <li class="list-group-item">
+                                        <div class="btn-group form-control p-0">
+                                            <button type="button" class="btn btn-secondary form-control text-start text-dark bg-white">Normal</button>
+                                            <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split text-dark bg-white" data-bs-toggle="dropdown">
+                                                <span class="visually-hidden">Toggle Dropdown</span>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Light</a></li>
+                                                <li><a class="dropdown-item" href="#">Normal</a></li>
+                                                <li><a class="dropdown-item" href="#">Extra</a></li>
+                                                <li><a class="dropdown-item" href="#">Double</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="card-footer bg-secondary text-end" style="--bs-bg-opacity: .1;">
                             <a href="#" class="btn btn-primary">< Previous</a>
