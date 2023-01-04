@@ -33,12 +33,13 @@
             <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
           </svg>
           <a class="text-end sign-up m-2" href="#">Sign up!</a>
+        </div>
     </nav>
 
 <!-- Pizza image/jumbotron using flex to align the text within the background image -->
     <div class="container my-2">
-        <div class="jumbotron m-auto d-flex flex-column justify-content-center" style="width: 100%">
-            <h2 class="bg-white d-flex justify-content-center" style="--bs-bg-opacity: .6;">Welcome to HxC Pizza World! SCREEEEEEE3EEE</h2>
+        <div class="jumbotron m-auto d-none d-sm-flex flex-column justify-content-center" style="width: 100%">
+            <h2 class="bg-white d-flex justify-content-center" style="--bs-bg-opacity: .6;">Welcome to HxC Pizza World!</h2>
         </div>
 
 <!-- Below is the beginning of the tabular section for the pizza options -->
@@ -141,6 +142,44 @@
                                                 <li><a class="dropdown-item" href="#">Normal</a></li>
                                                 <li><a class="dropdown-item" href="#">Extra</a></li>
                                                 <li><a class="dropdown-item" href="#">Double</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card" style="width: 100%;">
+                                <div class="card-header">
+                                    Sauce
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">What Type?</li>
+                                    <li class="list-group-item">
+                                        <div class="btn-group form-control p-0">
+                                            <button type="button" class="btn btn-secondary form-control text-start text-dark bg-white">Tomato</button>
+                                            <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split text-dark bg-white" data-bs-toggle="dropdown">
+                                                <span class="visually-hidden">Toggle Dropdown</span>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Tomato</a></li>
+                                                <li><a class="dropdown-item" href="#">Marinara</a></li>
+                                                <li><a class="dropdown-item" href="#">BBQ</a></li>
+                                                <li><a class="dropdown-item" href="#">Alfredo</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">How Much?</li>
+                                    <li class="list-group-item">
+                                        <div class="btn-group form-control p-0">
+                                            <button type="button" class="btn btn-secondary form-control text-start text-dark bg-white">Normal</button>
+                                            <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split text-dark bg-white" data-bs-toggle="dropdown">
+                                                <span class="visually-hidden">Toggle Dropdown</span>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Light</a></li>
+                                                <li><a class="dropdown-item" href="#">Normal</a></li>
+                                                <li><a class="dropdown-item" href="#">Extra</a></li>
                                             </ul>
                                         </div>
                                     </li>
