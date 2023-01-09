@@ -24,6 +24,13 @@
     pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
+<div>
+    <button id="btn1" type="button">Change Main Header Text</button>
+    <button id="btn2" type="button">Change Sub Header Color</button>
+    <button id="btn3" type="button">Change LI Color</button>
+    <button id="btn4" type="button">Change LI 1 Color</button>
+    <button id="btn5" type="button">Change Sub Header Text</button>
+</div>
 
 <script>
     (function () {
@@ -33,41 +40,58 @@
         console.log(mainHeader);
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-        mainHeader.innerHTML = "JavaScript is Cool";
+        // TODO: ADDED EVENT LISTENER
+        var changeMainHeader = function() {
+            mainHeader.innerHTML = "JavaScript is Cool";
+        }
+        document.getElementById("btn1").addEventListener('click', changeMainHeader);
+
 
         // TODO: Uncomment the next line and get the sub header element by id
         var subHeader = document.querySelector("#sub-header");
         console.log(subHeader);
 
         // TODO: Set the text color of subHeader to blue
-        subHeader.style.color = "Blue";
+        // TODO: ADDED EVENT LISTENER
+        var changeSubHeaderColor = function() {
+            subHeader.style.color = "Blue";
+        }
+        document.getElementById("btn2").addEventListener('click', changeSubHeaderColor);
+
 
         // TODO: Uncomment the next line and get all list items
         var listItems = document.getElementsByTagName("li");
         console.log(listItems);
 
         // TODO: Set text color on every other list item to grey
-        for (let i = 0; i < listItems.length; i++) {
-            if (i % 2 !== 0) {
-                listItems[i].style.color = "grey";
-            } else {
-                listItems[i].style.color = "black";
+        // TODO: ADDED EVENT LISTENER
+        var changeListItemColor = function() {
+            for (let i = 0; i < listItems.length; i++) {
+                if (i === 0) {
+                    listItems[i].style.color = "blue";
+                } else if (i % 2 === 0) {
+                    listItems[i].style.color = "grey";
+                } else {
+                    listItems[i].style.color = "black";
+                }
             }
         }
+        document.getElementById("btn3").addEventListener('click', changeListItemColor);
 
         // TODO: Set text color of li with dbid = 1 to blue
-        for (let i = 0; i < listItems.length; i++) {
-            if (i === 0) {
-                listItems[i].style.color = "blue";
-            }
-        }
+        // TODO: ADDED EVENT LISTENER
+
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
         var subParagraphs = document.querySelectorAll(".sub-paragraph");
         console.log(subParagraphs);
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        subParagraphs[0].innerHTML = "Mission Accomplished!";
+        // TODO: ADDED EVENT LISTENER
+        var changeSubPText = function() {
+            subParagraphs[0].innerHTML = "Mission Accomplished!";
+        }
+        document.getElementById("btn5").addEventListener('click', changeSubPText);
     })();
 </script>
 </body>
