@@ -18,8 +18,8 @@
     <li data-dbid="5">Item 5</li>
 </ul>
 <div>
-    <button id="btn3" type="button">Change LI Color</button>
-    <button id="btn4" type="button">Change LI 1 Color</button>
+    <button id="btn3" type="button">Change List Item Colors</button>
+    <button id="btn4" type="button">Change List Item 1 Color</button>
 </div>
 <br>
 <div>
@@ -86,11 +86,18 @@
         // TODO: Set text color of li with dbid = 1 to blue
         // TODO: ADDED EVENT LISTENER
         var changeLI1color = function () {
-            for (let i = 0; i < listItems.length; i++) {
-                if (i === 0) {
-                    listItems[i].style.color = "blue";
-                }
-            }
+            document.querySelector("li[data-dbid='1']").style.color = "blue"
+
+            // for (let i = 0; i < listItems.length; i++) {
+            //     if (i === 0) {
+            //         listItems[i].style.color = "blue";
+            //     }
+            // }
+
+            // if(listItems[i].getAttribute("data-dbid") === "1") {
+            //     listItems[i].style.color = "blue";
+            // }
+
         }
         document.getElementById('btn4').addEventListener('click', changeLI1color);
 
