@@ -48,7 +48,7 @@
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
         // TODO: ADDED EVENT LISTENER
-        var changeMainHeader = function () {
+        var changeMainHeader = function (event) {
             mainHeader.innerHTML = "JavaScript is Cool";
         }
         document.getElementById("btn1").addEventListener('click', changeMainHeader);
@@ -60,7 +60,7 @@
 
         // TODO: Set the text color of subHeader to blue
         // TODO: ADDED EVENT LISTENER
-        var changeSubHeaderColor = function () {
+        var changeSubHeaderColor = function (event) {
             subHeader.style.color = "Blue";
         }
         document.getElementById("btn2").addEventListener('click', changeSubHeaderColor);
@@ -72,7 +72,7 @@
 
         // TODO: Set text color on every other list item to grey
         // TODO: ADDED EVENT LISTENER
-        var changeListItemColor = function () {
+        var changeListItemColor = function (event) {
             for (let i = 0; i < listItems.length; i++) {
                 if (i % 2 === 0) {
                     listItems[i].style.color = "grey";
@@ -85,7 +85,7 @@
 
         // TODO: Set text color of li with dbid = 1 to blue
         // TODO: ADDED EVENT LISTENER
-        var changeLI1color = function () {
+        var changeLI1color = function (event) {
             document.querySelector("li[data-dbid='1']").style.color = "blue"
 
             // for (let i = 0; i < listItems.length; i++) {
@@ -107,7 +107,7 @@
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
         // TODO: ADDED EVENT LISTENER
-        var changeSubPText = function () {
+        var changeSubPText = function (event) {
             subParagraphs[0].innerHTML = "Mission Accomplished!";
         }
         document.getElementById("btn5").addEventListener('click', changeSubPText);
