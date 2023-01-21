@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device=width, initial-scale=1.0">
+    <meta name="description" content="Konami Code JQuery">
+    <meta name="keywords" content="JQuery">
+    <meta name="author" content="Stephen Talbot">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
+    <title>Konami Code</title>
+
+    <style>
+
+        * {
+            background: #d9d6d6;
+        }
+
+        h1 {
+            font-family: 'Bungee Shade', cursive, serif;
+            text-transform: uppercase;
+            text-align: center;
+            background-image: linear-gradient(
+                    -225deg,
+                    #231557 0%,
+                    #44107a 29%,
+                    #ff1361 67%,
+                    #fff800 100%
+            );
+            background-clip: border-box;
+            background-size: 195% auto;
+            color: #fff;
+            text-fill-color: transparent;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: textclip 3s linear infinite;
+            display: flex;
+            justify-content: center;
+            align-self: center;
+            font-size: 10em;
+        }
+
+        @keyframes textclip {
+            to {
+                background-position: 200% center;
+            }
+        }
+
+        .konami-instruction {
+            text-align: center;
+            font-family: 'Bungee Shade', cursive, serif;
+            font-size: 2em;
+            color: #000000;
+        }
+
+        div.keystrokes {
+            display: flex;
+            justify-content: center;
+        }
+
+        .konami-key {
+            padding: .5em;
+            display: inline-flex;
+            justify-content: center;
+        }
+
+        p.konami-success {
+            padding: .5em;
+            text-align: center;
+            font-family: 'Bungee Shade', cursive, serif;
+            font-size: 3em;
+            animation: blinker .49s ease infinite;
+            color: #ff7500;
+        }
+
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        /* CSS */
+        .button-85 {
+            padding: .6em 1.5em;
+            margin: .25em;
+            border: none;
+            outline: none;
+            color: rgb(255, 255, 255);
+            background: #111;
+            cursor: pointer;
+            position: relative;
+            z-index: 0;
+            border-radius: 10px;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }
+
+        .button-85:before {
+            content: "";
+            background: linear-gradient(
+                    45deg,
+                    #ff0000,
+                    #ff7300,
+                    #fffb00,
+                    #48ff00,
+                    #00ffd5,
+                    #002bff,
+                    #7a00ff,
+                    #ff00c8,
+                    #ff0000
+            );
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(5px);
+            -webkit-filter: blur(5px);
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            animation: glowing-button-85 20s linear infinite;
+            transition: opacity 0.3s ease-in-out;
+            border-radius: 10px;
+        }
+
+        @keyframes glowing-button-85 {
+            0% {
+                background-position: 0 0;
+            }
+            50% {
+                background-position: 400% 0;
+            }
+            100% {
+                background-position: 0 0;
+            }
+        }
+
+        .button-85:after {
+            z-index: -1;
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #222;
+            left: 0;
+            top: 0;
+            border-radius: 10px;
+        }
+
+    </style>
+
+</head>
+<body>
+<header>
+    <h1>KONAMI CODE!</h1>
+</header>
+<main>
+    <p class="konami-instruction">Complete the following sequence in order</p>
+    <div class="keystrokes container">
+        <div class="konami-key button-85">↑</div>
+        <div class="konami-key button-85">↑</div>
+        <div class="konami-key button-85">↓</div>
+        <div class="konami-key button-85">↓</div>
+        <div class="konami-key button-85">←</div>
+        <div class="konami-key button-85">→</div>
+        <div class="konami-key button-85">←</div>
+        <div class="konami-key button-85">→</div>
+        <div class="konami-key button-85">b</div>
+        <div class="konami-key button-85">a</div>
+        <div class="konami-key button-85">enter</div>
+    </div>
+    <p class="konami-success"></p>
+</main>
+<footer>
+
+</footer>
+
+
+<!--JQuery CDN-->
+<script
+        src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+        crossorigin="anonymous">
+</script>
+
+<!--Konami Code-->
+<script>
+    "use strict";
+
+    $(function () {
+        // used this as a template to complete the JQuery portion https://stackoverflow.com/questions/31626852/how-to-add-konami-code-in-a-website-based-on-html
+        var konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a', 'Enter'];
+        var konamiPosition = 0;
+
+        $(document).keyup(function (event) {
+            var userKey = event.key;
+            // console.log(userKey);
+            var requiredKey = konamiCode[konamiPosition];
+            if (userKey === requiredKey) {
+                konamiPosition++
+                // console.log(konamiPosition);
+                if (konamiPosition === konamiCode.length) {
+                    winKonami();
+                    alertKonami();
+                    konamiPosition = 0;
+                }
+            } else {
+                loser();
+                konamiPosition = 0;
+            }
+        });
+
+        function loser() {
+            var qf = new Audio('/mp3/qf.mp3');
+            qf.play();
+        }
+
+        function winKonami() {
+            var AHHHHH = new Audio('/mp3/AHHHHH.mp3');
+            // AHHHHH.loop = true;
+            AHHHHH.play();
+            $('p.konami-success').prepend('!!!Congrats, you just added 30 lives!!!');
+        }
+
+        // function alertKonami () {
+        //     alert('You have added 30 lives!');
+        //     $('p.konami-success').prepend('Congrats, you just added 30 lives!');
+        // }
+
+        // This is what Joe V did...
+        // let konamiCode = "3838404037393739666513";
+        //
+        // let userInput = "";
+        //
+        // $(document).keyup(function(event){
+        //     let newKey = event.keyCode;
+        //     userInput += "" + newKey;
+        //     console.log(userInput);
+        //
+        //
+        //     if (userInput.indexOf(konamiCode) !== -1) {
+        //         alert("You have added 30 lives!");
+        //         userInput = "";
+        //     }
+        // });
+
+    });
+</script>
+</body>
+</html>
+

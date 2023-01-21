@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>DOM: Query and Modify</title>
+</head>
+<body>
+
+<h1 id="main-header">Hello World!</h1>
+<div>
+    <button id="btn1" type="button">Change Main Header Text</button>
+</div>
+<ul>
+    <li data-dbid="1">Item 1</li>
+    <li data-dbid="2">Item 2</li>
+    <li data-dbid="3">Item 3</li>
+    <li data-dbid="4">Item 4</li>
+    <li data-dbid="5">Item 5</li>
+</ul>
+<div>
+    <button id="btn3" type="button">Change List Item Colors</button>
+    <button id="btn4" type="button">Change List Item 1 Color</button>
+</div>
+<br>
+<div>
+    <button id="btn2" type="button">Change Sub Header Color</button>
+</div>
+<h2 id="sub-header">Hello Again.</h2>
+<p class="sub-paragraph">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+    aliquip ex ea commodo consequat. Duis aute irure dolor in
+    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+    culpa qui officia deserunt mollit anim id est laborum.
+</p>
+<div>
+    <button id="btn5" type="button">Change Sub Header Text</button>
+</div>
+
+<script>
+    (function () {
+        "use strict";
+        // TODO: Uncomment next line and get the main header element by id
+        var mainHeader = document.querySelector("#main-header");
+        console.log(mainHeader);
+
+        // TODO: Set inner html of mainHeader to "JavaScript is Cool"
+        // TODO: ADDED EVENT LISTENER
+        var changeMainHeader = function (event) {
+            mainHeader.innerHTML = "JavaScript is Cool";
+        }
+        document.getElementById('btn1').addEventListener('click', changeMainHeader);
+
+
+        // TODO: Uncomment the next line and get the sub header element by id
+        var subHeader = document.querySelector("#sub-header");
+        console.log(subHeader);
+
+        // TODO: Set the text color of subHeader to blue
+        // TODO: ADDED EVENT LISTENER
+        var changeSubHeaderColor = function (event) {
+            subHeader.style.color = "Blue";
+        }
+        document.getElementById('btn2').addEventListener('click', changeSubHeaderColor);
+
+
+        // TODO: Uncomment the next line and get all list items
+        var listItems = document.getElementsByTagName('li');
+        console.log(listItems);
+
+        // TODO: Set text color on every other list item to grey
+        // TODO: ADDED EVENT LISTENER
+        var changeListItemColor = function (event) {
+            for (let i = 0; i < listItems.length; i++) {
+                if (i % 2 === 0) {
+                    listItems[i].style.color = "grey";
+                } else {
+                    listItems[i].style.color = "black";
+                }
+            }
+        }
+        document.getElementById('btn3').addEventListener('click', changeListItemColor);
+
+        // TODO: Set text color of li with dbid = 1 to blue
+        // TODO: ADDED EVENT LISTENER
+        var changeLI1color = function (event) {
+            document.querySelector("li[data-dbid='1']").style.color = "blue"
+
+            // for (let i = 0; i < listItems.length; i++) {
+            //     if (i === 0) {
+            //         listItems[i].style.color = "blue";
+            //     }
+            // }
+
+            // if(listItems[i].getAttribute("data-dbid") === "1") {
+            //     listItems[i].style.color = "blue";
+            // }
+
+        }
+        document.getElementById('btn4').addEventListener('click', changeLI1color);
+
+        // TODO: Uncomment the next line and get all elements with class name sub-paragraph
+        var subParagraphs = document.querySelectorAll(".sub-paragraph");
+        console.log(subParagraphs);
+
+        // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
+        // TODO: ADDED EVENT LISTENER
+        var changeSubPText = function (event) {
+            document.querySelector("p.sub-paragraph").innerHTML = "Mission Accomplished!";
+        }
+        document.getElementById('btn5').addEventListener('click', changeSubPText);
+    })();
+</script>
+</body>
+</html>

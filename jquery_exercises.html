@@ -1,0 +1,86 @@
+<!DOCTYPE html> <!-- DOCTYPE declaration -->
+<html lang="en"> <!-- root element with attributes -->
+<head> <!-- content in head is not normally displayed -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device=width, initial-scale=1.0">
+    <meta name="description" content="Learning JQuery">
+    <meta name="keywords" content="JQuery">
+    <meta name="author" content="Stephen Talbot">
+
+    <title>JQuery</title>
+</head>
+<body>
+<div id="header">
+    <header>
+        <h1 id="my-h1" class="style-h1 codeup test-selector">This Document Will Make 0 Sense</h1>
+    </header>
+</div>
+
+<div id="main-content">
+    <p id="p-funny-quote" class="style-p codeup test-selector">
+        "I may not be the person that everyone wants, but at least I'm not the person that everyone has had"
+    </p>
+    <div class="test-selector">Here is a random list</div>
+    <ul id="ul-chess-pieces" class="style-ul codeup">
+        <li class="style-li test-selector">King</li>
+        <li class="style-li test-selector">Queen</li>
+        <li class="style-li test-selector">Rook</li>
+        <li class="style-li test-selector">Knight</li>
+        <li class="style-li test-selector">Bishop</li>
+        <li class="style-li test-selector">Pawn</li>
+    </ul>
+</div>
+
+
+<!--JQuery CDN-->
+<script
+        src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+        crossorigin="anonymous">
+</script>
+
+<!--local js script used for the exercises involving JQuery-->
+<script>
+// Intro to JQuery Exercise Solution
+// console.log("Pre loading the DOM");
+// $(document).ready(function () {}); //can also be written this way
+// $(function () {
+//     var loadedDOM = "The DOM has finished loading"
+//     console.log(loadedDOM)
+//     alert(loadedDOM);
+//      });
+//      console.log("Post Loading the DOM") // this fires before the JQuery so it is logged before the .ready
+
+
+// JQuery Selectors Exercise Solution
+// $(document).ready(function () { //id selectors
+//     alert($('#my-h1').html());
+//     alert($('#ul-chess-pieces').text());
+//     $('.codeup').css('border', '1px red solid'); //class selectors
+//     $('li').css('font-size', '20px'); //element selectors
+//     $('.test-selector').css('background-color', '#fffd70');
+//     alert($('h1').text());
+//     $('h1, p, li').css('background-color', '#fffd70'); //multiple selectors
+// });
+
+// Mouse Events Exercise Solution
+$(function () {
+    $('#my-h1').click(function (){
+        $(this).css('background-color', 'rgba(69,182,254,0.72)');
+    });
+    $('p').dblclick(function (){
+        $(this).css('font-size', '18px');
+    });
+    $('li').hover(
+        function (){
+            $(this).css('color', 'red');
+        },
+        function (){
+            $(this).css('color', 'black');
+        }
+    );
+});
+</script>
+</body>
+</html>

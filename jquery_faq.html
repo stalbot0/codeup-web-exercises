@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device=width, initial-scale=1.0">
+    <meta name="description" content="JQuery Attributes & CSS">
+    <meta name="keywords" content="JQuery Attributes">
+    <meta name="author" content="Stephen Talbot">
+    <title>Jquery Attributes & CSS</title>
+
+    <style>
+        .invisible {
+            visibility: hidden;
+        }
+
+        #FAQ-info-toggle {
+            text-align: center;
+        }
+
+        .bg-yellow {
+            background-color: #ffff94;
+        }
+
+        h2 {
+            font-size: 35px;
+        }
+
+        dt {
+            margin-top: 10px;
+            font-weight: bolder;
+        }
+
+        div.national-parks {
+            padding: .5em 2em;
+        }
+
+        button {
+            margin: auto;
+        }
+
+        .fw-bold {
+            font-weight: bold;
+        }
+
+        .fc-blue {
+            color: cornflowerblue;
+        }
+
+        /*Traversing Bonus styles*/
+        div#traversing-bonus {
+            display: flex;
+            justify-content: space-evenly;
+            margin: 3em;
+        }
+
+        img {
+            border: 10px solid grey;
+            border-radius: 0.5em;
+            padding: 0.5em;
+        }
+
+        button.painting-btn {
+            background-image: url("img/wavy-background-pattern.png");
+            box-shadow: 3px 5px grey;
+            font-family: "Apple Chancery", serif;
+            font-size: 1.5em;
+            font-weight: bolder;
+            margin: auto;
+            height: 15%;
+            width: 25%;
+            display: flex;
+            border-radius: 1em;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button:active {
+            transform: scale(0.98);
+            /* Scaling button to 0.98 to its original size */
+            box-shadow: 3px 2px 22px 1px black;
+            /* Lowering the shadow */
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="national-parks">
+    <h2>National Park Service FAQ</h2>
+    <!--https://www.nationalgeographic.com/expeditions/get-inspired/inside-look/12-fun-facts-about-americas-national-parks/-->
+    <dl>
+        <dt>Who is the director of the National Park Service?</dt>
+        <dd>Charles F. "Chuck" Sams III is the Director of the National Park Service.</dd>
+
+        <dt>What government agency oversees the National Park Service?</dt>
+        <dd>The National Park Service is a bureau of the Department of the Interior. Directly overseeing its operation
+            is
+            the department's Assistant Secretary for Fish, Wildlife and Parks.
+        </dd>
+
+        <dt>How old is the National Park System?</dt>
+        <dd>The National Park Service was created by an act signed by President Woodrow Wilson on August 25, 1916.
+            Yellowstone National Park was established by an act signed by President Ulysses S. Grant on March 1, 1872,
+            as
+            the nation's first national park.
+        </dd>
+
+        <dt>What is the origin of the National Park Service arrowhead?</dt>
+        <dd>The arrowhead was authorized as the official National Park Service emblem by the Secretary of the Interior
+            on
+            July 20, 1951. The components of the arrowhead may have been inspired by key attributes of the National Park
+            System, with the sequoia tree and bison representing vegetation and wildlife, the mountains and water
+            representing scenic and recreational values, and the arrowhead itself representing historical and
+            archaeological
+            values.
+        </dd>
+
+        <dt>What is the largest national park site?</dt>
+        <dd>Largest: Wrangell-St. Elias National Park and Preserve, AK, at 13.2 million acres</dd>
+
+        <dt>What is the smallest national park site?</dt>
+        <dd>Smallest: Thaddeus Kosciuszko National Memorial, PA, at 0.02 acres</dd>
+
+        <dt>How many people visit the national parks?</dt>
+        <dd>Total recreation visitors to the national parks in 2021: 297,115,406.</dd>
+
+        <dt>Can I bring my pet to a national park?</dt>
+        <dd>Some national parks welcome pets—in developed areas, on many trails and campgrounds, and in some lodging
+            facilities.
+        </dd>
+
+        <dt>Can I bring my service dog to a national park?</dt>
+        <dd>Yes, service dogs are legally permitted anywhere in a park that visitors can go.</dd>
+
+        <dt>What do I need to know about driving off road in national parks?</dt>
+        <dd>Before you head out, check with the national parks that you intend to visit. In many national parks,
+            off-road
+            driving is illegal. Where off-road driving is allowed, the National Park Service regulates it.
+        </dd>
+    </dl>
+    <button type="button" id="FAQ-info-toggle">Click To Toggle FAQ's!</button>
+</div>
+
+<div class="national-parks">
+    <h1>National Parks</h1>
+    <h3 id="yellowstone">Yellowstone Facts</h3>
+    <ul id="national-park-yellowstone">
+        <li>Yellowstone encompasses 3,472 square miles (2,221,766 acres) which makes it larger than Rhode Island and
+            Delaware combined.
+        </li>
+        <li>There are more than 10,000 hydrothermal features in Yellowstone. The four types of thermal features are
+            geysers, hot springs, mud pots, and fumaroles.
+        </li>
+        <li>Yellowstone is home to more than 500 active geysers (more than half the world’s geysers).</li>
+        <li>Yellowstone is home to the largest concentration of mammals in the lower 48 states (67 species).</li>
+    </ul>
+    <h3 id="yosemite">Yosemite Facts</h3>
+    <ul id="national-park-yosemite">
+        <li>Yosemite’s granite rock formations glow like fire at sunset.</li>
+        <li> Yosemite is home to one of the tallest waterfalls in the world.</li>
+        <li>Yosemite is the only national park to bid to host the winter Olympics.</li>
+        <li>The Nation’s First “Park Ranger” Served As the “Guardian” Of Yosemite National Park</li>
+    </ul>
+    <h3 id="arches">Arches Facts</h3>
+    <ul id="national-park-arches">
+        <li>There are more than 2000 natural sandstone arches inside Arches National Park.</li>
+        <li>The most famous natural stone arch in the world - Delicate Arch! Known from photos, this arch has become
+            iconic due to its freestanding shape.
+        </li>
+        <li>You can find the tallest opening to an arch in The Windows Area of the park - Double Arch at 112 feet.</li>
+        <li>The crust on the surface is a living community of microbiotic growth. This soil sustains the life in the
+            desert.
+        </li>
+    </ul>
+    <button id="toggle-last-li">Highlight the last list items</button>
+</div>
+
+<div id="traversing-bonus">
+    <div id="picture-frame-1" class="picture-frame-inside">
+        <img src="img/prison%20mike.png" alt="paint mixed">
+        <button id="painting-1-btn" class="painting-btn">1</button>
+    </div>
+    <div id="picture-frame-2" class="picture-frame-inside">
+        <img src="img/date-mike.png" alt="paint mixed">
+        <button id="painting-2-btn" class="painting-btn">2</button>
+    </div>
+    <div id="picture-frame-3" class="picture-frame-inside">
+        <img src="img/michael-scott-bomb1.png" alt="paint mixed">
+        <button id="painting-3-btn" class="painting-btn">3</button>
+    </div>
+
+</div>
+
+<!--JQuery CDN-->
+<script
+        src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+        crossorigin="anonymous">
+</script>
+
+<script>
+    "use strict";
+    $(function () {
+        $('dd').addClass('invisible');
+
+        $('#FAQ-info-toggle').click(function () {
+            $('dd').toggleClass('invisible');
+        });
+
+        $('dt').click(function () {
+            $(this).toggleClass('bg-yellow');
+        });
+
+        $('#toggle-last-li').click(function () {
+            // $('ul li:last-child').toggleClass('bg-yellow');
+            $('ul').each(function () {
+                $(this).children().last().toggleClass('bg-yellow');
+            })
+        });
+
+        $('h3').click(function () {
+            $(this).next().children().each(function () {
+                $(this).toggleClass('fw-bold')
+            });
+        });
+
+        $('li').click(function () {
+            $(this).parent().children().first().toggleClass('fc-blue');
+        });
+
+
+        var img_1_src = $('#painting-1-btn').prev().attr('src');
+        var img_2_src = $('#painting-2-btn').prev().attr('src');
+        var img_3_src = $('#painting-3-btn').prev().attr('src');
+
+        $('#painting-1-btn').click(function () {
+            img_1_src = $('#painting-1-btn').prev().attr('src');
+            // console.log(img_1_src); // -- ok this works
+            img_2_src = $('#painting-2-btn').prev().attr('src');
+            // console.log(img_2_src); // -- ok this works
+            $(this).prev().attr('src', img_2_src);
+            $('#painting-2-btn').prev().attr('src', img_1_src);
+        });
+
+        $('#painting-2-btn').click(function () {
+            var randomNum = Math.floor(Math.random() * (2 - 1 + 1)) + 1;
+            if (randomNum % 2 === 0) {
+                img_1_src = $('#painting-1-btn').prev().attr('src');
+                img_2_src = $('#painting-2-btn').prev().attr('src');
+                $('#painting-2-btn').prev().attr('src', img_1_src);
+                $('#painting-1-btn').prev().attr('src', img_2_src);
+            }
+            if (randomNum % 2 !== 0) {
+                img_2_src = $('#painting-2-btn').prev().attr('src');
+                img_3_src = $('#painting-3-btn').prev().attr('src');
+                $('#painting-2-btn').prev().attr('src', img_3_src);
+                $('#painting-3-btn').prev().attr('src', img_2_src);
+            }
+        })
+
+        $('#painting-3-btn').click(function () {
+            img_2_src = $('#painting-2-btn').prev().attr('src');
+            img_3_src = $('#painting-3-btn').prev().attr('src');
+            $(this).prev().attr('src', img_2_src);
+            $('#painting-2-btn').prev().attr('src', img_3_src);
+        })
+    });
+</script>
+</body>
+</html>

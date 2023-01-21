@@ -1,0 +1,113 @@
+/*
+multi
+line
+comment
+*/
+
+.fancy-header {
+    color: #2C3E50; /* single line comment */
+    text-decoration: underline;
+    text-decoration-color: #696969;
+}
+
+header {
+    text-align: center;
+}
+
+#core_values_our_process_2020_vision {
+    background-image: url("https://media.istockphoto.com/id/871030872/photo/programming-code-abstract-technology-background-of-software-developer.jpg?b=1&s=170667a&w=0&k=20&c=-4_fKSaeTwGLirw2EmAx-M8Ng9TpVyj2luQl5bK6eDI=");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: center;
+    background-position-x: right;
+    padding: 0;
+    margin-right: 15px;
+}
+
+h3 {
+    color: #5D6D7E;
+    text-decoration: underline;
+    text-decoration-color: #696969;
+    margin-left: 75px;
+}
+
+body {
+    background-image: url("https://static.vecteezy.com/system/resources/previews/001/984/361/original/abstract-modern-pattern-background-white-and-grey-geometric-texture-art-illustration-free-vector.jpg"); /*COW*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #F1F1F1;
+    background-attachment: fixed;
+}
+
+.unordered-list1 {
+   list-style-type: circle;
+    margin-left: 50px;
+}
+.unordered-list2 {
+    list-style-type: circle;
+    margin-left: 15px;
+}
+
+.ordered-list {
+    margin-left: 65px;
+}
+
+html {
+    font-family: "tahoma", serif;
+}
+
+h3.company-vision {
+    text-align: center;
+}
+
+.solid-border {
+    border: 1px solid black;
+}
+
+.plan-price-features {
+    padding: 2px;
+    margin-right: auto;
+    margin-left: auto;
+    border: 2px solid black;
+    background-color: rgba(188, 143, 143, 0.27);
+}
+
+.plan-price-features th {
+    border: 2px solid black;
+    font-family: "Bodoni 72 Oldstyle", serif;
+}
+
+.plan-price-features td {
+    border: 1px solid grey;
+    font-family: Chalkboard, fantasy;
+  }
+
+  .center-table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer {
+    text-align: center;
+    text-decoration: dimgrey;
+    text-decoration-style: dashed;
+}
+
+.top_of_page_href {
+    text-align: center;
+}
+
+.top_of_page_href>a:link {
+    color: #E61919
+}
+.top_of_page_href>a:hover {
+    color: #ff8e31;
+    font-family: 'Chalkboard', 'serif';
+    font-size: 30px;
+}
+.top_of_page_href>a:visited {
+    color: #875454
+}
+.top_of_page_href>a:active {
+    color: #2C3E50;
+}

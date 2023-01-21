@@ -1,0 +1,13 @@
+a.sign-up {
+    text-decoration: none;
+    color: black;
+}
+
+.jumbotron {
+    background-image: url("../img/background-img.png");
+    background-size: cover;
+    height: 150px;
+    margin: 0;
+    border-radius: .5em;
+}
+
