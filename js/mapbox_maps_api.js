@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
     mapboxgl.accessToken = MAPBOX_API_KEY;
 
     const map = new mapboxgl.Map({
@@ -8,6 +8,7 @@ $(document).ready(function() {
         center: [-97.743676, 30.269374]
     });
 
+    map.addControl(new mapboxgl.NavigationControl());
 
 
     let marker = new mapboxgl.Marker()
@@ -18,35 +19,49 @@ $(document).ready(function() {
     // the  geocode method from mapbox-geocoder-utils.js
 
     function pinThatAddress(address) {
-        geocode(address, MAPBOX_API_KEY).then(function(result) {
+        geocode(address, MAPBOX_API_KEY).then(function (result) {
             console.log(result);
             const marker = new mapboxgl.Marker();
             marker.setLngLat(result);
             marker.addTo(map);
+            map.setZoom(12)
 
             const popup = new mapboxgl.Popup();
             popup.setHTML(`<h3>${address}</h3>`);
             marker.setPopup(popup);
 
-        }).catch(function(error) {
+        }).catch(function (error) {
             console.log("Boom");
         });
     }
 
-    pinThatAddress("Perry's Steakhouse");;
+    pinThatAddress("Perry's Steakhouse");
 
     // reverse geocode method from mapbox-geocoder-utils.js
-    reverseGeocode({lng: -97.743676, lat: 30.269372}, MAPBOX_API_KEY).then(function(results) {
+    reverseGeocode({lng: -97.743676, lat: 30.269372}, MAPBOX_API_KEY).then(function (results) {
         // logs the address for The Alamo
         console.log(results);
     });
 
-    // marker = new mapboxgl.Marker();
-    // marker.setLngLat([-98.4960, 29.5185]);
-    // marker.addTo(map);
-    //
-    // const popup = new mapboxgl.Popup();
-    // popup.setHTML("<h3>North Start Mall</h3>");
-    // marker.setPopup(popup);
+    var restaurantsArray = [
+        {
+            name: "Perry's Steakhouse, Austin TX",
+            restaurantType: "Upscale Steakhouse",
+            bestDish: "Filet Mignon"
+        },
+        {
+            name: "ATX Cocina, Austin TX",
+            restaurantType: "Modern Mexican Cuisine",
+            bestDish: "Lamb Adobo"
+        },
+        {
+            name: "Blue Sushi Sake Grill, Austin TX",
+            restaurantType: "Sushi & Japanese Tapas",
+            bestDish: "Lion King"
+        }
+    ]
 
+    restaurantsArray.forEach(function(restaurant){
+        pinThatAddress(restaurant.name)
+    })
 });
