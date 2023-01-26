@@ -57,18 +57,29 @@
 // TODO: Use .reduce to get the total years of experience from the list of users. Once you get the total of years you can use the result to calculate the average.
 
     var totalExperience = users.reduce(function (totalYears, yearsPerPerson) {
-        return totalYears + yearsPerPerson.yearsOfExperience;
+        return (totalYears + yearsPerPerson.yearsOfExperience);
     }, 0);
-    console.log(totalExperience);
+    var avgYears = (totalExperience / users.length);
+    console.log(avgYears);
 
 // TODO: Use .reduce to get the longest email from the list of users.
-    var longestEmail = users.reduce(function (longestEmailSoFar, userEmail) {
-        if (userEmail.email.length > longestEmailSoFar.email.length ) {
-        return userEmail.email
+    var longestEmail = users.reduce(function (longestEmailSoFar, user) {
+        // console.log(longestEmailSoFar);
+        if (user.email.length >= longestEmailSoFar.length) {
+            return user.email;
         } else {
-            return longestEmailSoFar.email;
+            return longestEmailSoFar;
         }
-    }, {userEmail : ''}.email);
+    }, '');
     console.log(longestEmail);
 
+    // TODO: Use .reduce to get the list of user's names in a single string. Example: Your instructors are: ryan, luis, zach, fernando, justin.
+    var userNames = users.reduce(function (accumulatedUser, user) {
+        return `${accumulatedUser}, ${user.name}`
+    }, `Your instructors are: `);
+    console.log(userNames);
+
+    ///////BONUS below////////
+
+    //
 }());
