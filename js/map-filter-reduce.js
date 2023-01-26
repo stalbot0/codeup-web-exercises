@@ -43,7 +43,7 @@
 // TODO: Use .filter to create an array of user objects where each user object has at least 3 languages in the languages array.
     var threeLanguagesArr = users.filter(function (user) {
         if (user.languages.length >= 3) {
-           return user.languages
+            return user.languages
         }
     });
     console.log(threeLanguagesArr);
@@ -75,11 +75,23 @@
 
     // TODO: Use .reduce to get the list of user's names in a single string. Example: Your instructors are: ryan, luis, zach, fernando, justin.
     var userNames = users.reduce(function (accumulatedUser, user) {
-        return `${accumulatedUser}, ${user.name}`
-    }, `Your instructors are: `);
+        return `${accumulatedUser}, ${user.name}`;
+    }, `Your instructors are:`);
     console.log(userNames);
 
-    ///////BONUS below////////
+    ///////BONUS////////
 
-    //
+
+    // const uniqueLanguages = users.reduce(function(languages, user) {
+    //     user.languages.forEach(language => {
+    //         if (!languages.includes(language)) {
+    //             languages.push(language);
+    //         }
+    //     });
+    //     return languages;
+    // }, []);
+    // console.log(uniqueLanguages);
+
+
+
 }());
