@@ -49,8 +49,8 @@
     console.log(threeLanguagesArr);
 
 // TODO: Use .map to create an array of strings where each element is a user's email address
-    var emailAddress = users.map(function (user) {
-        return user.email;
+    var emailAddress = users.map(function ({ email }) {
+        return email;
     });
     console.log(emailAddress);
 
@@ -59,6 +59,7 @@
     var totalExperience = users.reduce(function (totalYears, yearsPerPerson) {
         return (totalYears + yearsPerPerson.yearsOfExperience);
     }, 0);
+    console.log(totalExperience);
     var avgYears = (totalExperience / users.length);
     console.log(avgYears);
 
@@ -74,13 +75,17 @@
     console.log(longestEmail);
 
     // TODO: Use .reduce to get the list of user's names in a single string. Example: Your instructors are: ryan, luis, zach, fernando, justin.
-    var userNames = users.reduce(function (accumulatedUser, user) {
-
-        return `${accumulatedUser} ${user.name}`;
+    var userNames = users.reduce(function (accumulatedUser, user, index) {
+        if (index === users.length - 1) {
+            return `${accumulatedUser} ${user.name}.`;
+        } else {
+            return `${accumulatedUser} ${user.name},`;
+        }
     }, `Your instructors are:`);
     console.log(userNames);
 
-    ///////BONUS//////// TODO: Use .reduce to get the unique list of languages from the list of users.
+    ///////BONUS////////
+    // TODO: Use .reduce to get the unique list of languages from the list of users.
 
     const uniqueLanguages = users.reduce(function(languagesAcc, user) {
         user.languages.forEach(language => {
