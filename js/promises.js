@@ -1,27 +1,36 @@
-"use strict";
+(async function () {
 
-(function () {
-
-    var githubUsername = "stalbot0"
-
-    function getLatestCommit() {
-        return fetch('https://api.github.com/users/' + githubUsername + '/events', {headers: {'Authorization': 'GITHUB_API_KEY2'}})
+    function getLatestCommitDate(githubUserName, apiKey) {
+        let githubURL = `https://api.github.com/users/${githubUserName}/events`
+        return fetch(githubURL,
+            {
+                headers: {
+                    'Authorization': `token ${apiKey}`
+                }
+            })
             .then(response => response.json())
-            .then(data => console.log(new Date(data[0].created_at)))
+            .then(data => {
+                return data.filter(event => {
+                    return event.type === "PushEvent"
+                })[0].created_at;
+            })
+            // console.log(`This user's last commit/push was on ${new Date(data[0].created_at).toDateString().substring(0, 15)}`))
             .catch(error => console.error(error));
     }
 
-    getLatestCommit();
+    let lastCommitDate = await getLatestCommitDate("stalbot0", GITHUB_API_KEY);
+    console.log(lastCommitDate);
 
-
+// create your own promise YIPPEEE
     function wait(number) {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
+                let resolveLog = `This message displays after ${number / 1000} second`;
                 if (number === 1000) {
-                    resolve(`This message displays after ${number / 1000} second`);
+                    resolve(resolveLog);
                 }
                 if (number !== 1000) {
-                    resolve(`This message displays after ${number / 1000} seconds`)
+                    resolve(`${resolveLog}s`)
                 } else {
                     reject("This did not work");
                 }
@@ -29,6 +38,5 @@
         });
     }
 
-    wait(500).then((resolveMessage) => console.log(resolveMessage));
-
+    wait(1000).then((resolveVal) => console.log(resolveVal));
 }());
