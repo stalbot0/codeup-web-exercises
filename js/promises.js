@@ -20,14 +20,15 @@
                 if (number === 1000) {
                     resolve(`This message displays after ${number / 1000} second`);
                 }
-                if (number > 1000) {
+                if (number !== 1000) {
                     resolve(`This message displays after ${number / 1000} seconds`)
+                } else {
+                    reject("This did not work");
                 }
-                reject("This did not work");
             }, number);
         });
     }
 
-    wait(1000).then((resolveMessage) => console.log(resolveMessage));
+    wait(500).then((resolveMessage) => console.log(resolveMessage));
 
 }());
